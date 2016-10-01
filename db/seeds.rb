@@ -23,7 +23,7 @@ kyle = User.create(
 	user_type: "admin",
 	first_name: "Kyle",
 	last_name: "Kremski",
-	password_hash: "$$$$",
+	password: 'password',
 	email: "kkremski@gmail.com",
 	zip: 60647
 	)
@@ -33,7 +33,7 @@ rob = User.create(
 	user_type: "admin",
 	first_name: "Rob",
 	last_name: "Dale",
-	password_hash: "$$$$",
+	password: 'password',
 	email: "robzd1@gmail.com",
 	zip: 60647
 	)

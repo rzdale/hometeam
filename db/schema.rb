@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927184428) do
+ActiveRecord::Schema.define(version: 20161001181910) do
 
   create_table "broadcasts", force: :cascade do |t|
     t.string   "name",       null: false
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20160927184428) do
     t.string   "name",       null: false
     t.datetime "time",       null: false
     t.integer  "venue_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "global_broadcasts", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.integer  "event_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,6 +49,8 @@ ActiveRecord::Schema.define(version: 20160927184428) do
   create_table "reviews", force: :cascade do |t|
     t.integer  "reviewer_id", null: false
     t.integer  "reviewee_id", null: false
+    t.integer  "star_rating"
+    t.text     "comments"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
