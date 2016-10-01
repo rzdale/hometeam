@@ -168,4 +168,9 @@ Rsvp.create(user_id: kyle.id, event_id: cp.id)
 
 
 
-# Review
+Review.create(
+	reviewer_id: rob.id,
+	reviewee_id: kyle.id,
+	star_rating: 4,
+	comments: "Pretty sure this is actually Jon's place."
+	)
