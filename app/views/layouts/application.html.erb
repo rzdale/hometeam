@@ -9,6 +9,25 @@
   </head>
 
   <body>
+
+  	<% if session[:user_id] %>
+  		logged in as <%= @user.id %>
+  		<br>
+  	<% else %>
+	  	<nav>
+			<%= form_tag("/login", method: "post") do %>
+			  <%= label_tag(:email, "Email:") %>
+			  <%= text_field_tag(:email) %>
+
+			  <%= label_tag(:password, "Password") %>
+			  <%= password_field_tag(:password) %>
+
+			  <%= submit_tag("Log in") %>
+			<% end %>
+	  	</nav>
+  	<% end %>
+
+
     <%= yield %>
   </body>
 </html>

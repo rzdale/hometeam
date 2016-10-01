@@ -23,7 +23,7 @@ kyle = User.create(
 	user_type: "admin",
 	first_name: "Kyle",
 	last_name: "Kremski",
-	password_hash: "$$$$",
+	password: 'password',
 	email: "kkremski@gmail.com",
 	zip: 60647
 	)
@@ -33,7 +33,7 @@ rob = User.create(
 	user_type: "admin",
 	first_name: "Rob",
 	last_name: "Dale",
-	password_hash: "$$$$",
+	password: 'password',
 	email: "robzd1@gmail.com",
 	zip: 60647
 	)
@@ -168,4 +168,9 @@ Rsvp.create(user_id: kyle.id, event_id: cp.id)
 
 
 
-# Review
+Review.create(
+	reviewer_id: rob.id,
+	reviewee_id: kyle.id,
+	star_rating: 4,
+	comments: "Pretty sure this is actually Jon's place."
+	)

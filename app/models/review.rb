@@ -1,4 +1,4 @@
 class Review < ActiveRecord::Base
-	belongs_to :user # reviewer
-	belongs_to :user # reviewee
+	belongs_to :reviewer, class_name: "User"
+	belongs_to :reviewee, class_name: "User"
 end
