@@ -1,0 +1,17 @@
+* {
+	font-family: Helvetica, Arial, Sans-Serif;
+}
+
+
+h1 {
+	display: inline-block;
+}
+
+
+#navcontainer {
+
+	float: right;
+	display: inline-block;
+
+}
+

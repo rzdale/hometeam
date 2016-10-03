@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <h1>
+      <%= link_to "Hometeam", root_path %>
+    </h1>
+    
+
     <div id="navcontainer"> 
     	<% if session[:user_id] %>
       <% user = User.find(session[:user_id]) %>
@@ -29,6 +34,8 @@
     	<% end %>
     </div>
 
-    <%= yield %>
+    <div>
+      <%= yield %>
+    </div>
   </body>
 </html>

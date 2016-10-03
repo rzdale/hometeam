@@ -1,1 +1,13 @@
-show all events
+Current events in your area:
+
+<% if @events %>
+	<ul>
+		<% @events.each do |event| %>
+
+			<li>
+				<%= event.name %>, <%= event.time %>
+			</li>
+
+		<% end %>
+	</ul>
+<% end %>
