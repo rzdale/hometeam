@@ -17,7 +17,7 @@
     <div id="navcontainer"> 
     	<% if session[:user_id] %>
       <% user = User.find(session[:user_id]) %>
-    		logged in as <%= user.email %>
+    		logged in as <%= link_to user.email, "/users/#{user.id}" %>
         <%= link_to "Log out", "/users/logout" %>
     		<br>
     	<% else %>

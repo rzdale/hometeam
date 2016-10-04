@@ -1,0 +1,22 @@
+<% if @user %>
+	<%= "Welcome #{@user.first_name}!" %>
+	<% if @user.hosting_events%>
+		Events you're hosting:
+		<ul>
+			<% @user.hosting_events.each do |event| %>
+				<li><%= link_to event.name, "/events/#{event.id}" %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<% if @user.attending_events%>
+		Events you're attending:
+		<ul>
+			<% @user.attending_events.each do |event| %>
+				<li><%= link_to event.name, "/events/#{event.id}" %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+
+<% end %>
