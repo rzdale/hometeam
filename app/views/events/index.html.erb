@@ -5,7 +5,7 @@ Current events in your area:
 		<% @events.each do |event| %>
 
 			<li>
-				<%= event.name %>, <%= event.time %>
+				<%= link_to event.name, "/events/#{event.id}"%>
 			</li>
 
 		<% end %>

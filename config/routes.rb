@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   post '/login' => 'users#login'
 
 
+
+  get '/events/:id' => 'events#show'
+
+  get '/users/logout'
+
 end
