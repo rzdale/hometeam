@@ -40,12 +40,6 @@ ActiveRecord::Schema.define(version: 20161001181910) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "performers", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.integer  "reviewer_id", null: false
     t.integer  "reviewee_id", null: false
@@ -69,11 +63,20 @@ ActiveRecord::Schema.define(version: 20161001181910) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "broadcast_id",                          null: false
+    t.integer  "performer_id",                          null: false
+    t.string   "broadcast_type", default: "individual"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+  end
+
   create_table "tags", force: :cascade do |t|
-    t.integer  "broadcast_id", null: false
-    t.integer  "performer_id", null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "name",       null: false
+    t.string   "league"
+    t.string   "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
