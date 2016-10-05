@@ -15,8 +15,8 @@ Subscription.delete_all
 Package.delete_all
 Broadcast.delete_all
 Tag.delete_all
-Performer.delete_all
-
+Tagging.delete_all
+GlobalBroadcast.delete_all
 
 
 kyle = User.create(
@@ -50,70 +50,70 @@ Subscription.create(venue_id: 1, package_id: 1)
 Subscription.create(venue_id: 2, package_id: 2)
 
 
-bruins = Performer.create(name: "Boston Bruins")
-sabres = Performer.create(name: "Buffalo Sabres")
-wings = Performer.create(name: "Detroit Red Wings")
-panthers = Performer.create(name: "Florida Panthers")
-canadiens = Performer.create(name: "Montreal Canadiens")
-senators = Performer.create(name: "Ottawa Senators")
-lightning = Performer.create(name: "Tampa Bay Lightning")
-leafs = Performer.create(name: "Toronto Maple Leafs")
-hurricanes = Performer.create(name: "Carolina Hurricanes")
-jackets = Performer.create(name: "Columbus Blue Jackets")
-devils = Performer.create(name: "New Jersey Devils")
-islanders = Performer.create(name: "New York Islanders")
-rangers = Performer.create(name: "New York Rangers")
-flyers = Performer.create(name: "Philadelphia Flyers")
-penguins = Performer.create(name: "Pittsburgh Penguins")
-capitals = Performer.create(name: "Washington Capitals")
-ducks = Performer.create(name: "Anaheim Ducks")
-coyotes = Performer.create(name: "Arizona Coyotes")
-flames = Performer.create(name: "Calgary Flames")
-oilers = Performer.create(name: "Edmonton Oilers")
-kings = Performer.create(name: "Los Angeles Kings")
-sharks = Performer.create(name: "San Jose Sharks")
-canucks = Performer.create(name: "Vancouver Canucks")
-blackhawks = Performer.create(name: "Chicago Blackhawks")
-avalanche = Performer.create(name: "Colorado Avalanche")
-stars = Performer.create(name: "Dallas Stars")
-wild = Performer.create(name: "Minnesota Wild")
-predators = Performer.create(name: "Nashville Predators")
-blues = Performer.create(name: "St. Louis Blues")
-jets = Performer.create(name: "Winnipeg Jets")
+bruins = Tag.create(name: "Boston Bruins")
+sabres = Tag.create(name: "Buffalo Sabres")
+wings = Tag.create(name: "Detroit Red Wings")
+panthers = Tag.create(name: "Florida Panthers")
+canadiens = Tag.create(name: "Montreal Canadiens")
+senators = Tag.create(name: "Ottawa Senators")
+lightning = Tag.create(name: "Tampa Bay Lightning")
+leafs = Tag.create(name: "Toronto Maple Leafs")
+hurricanes = Tag.create(name: "Carolina Hurricanes")
+jackets = Tag.create(name: "Columbus Blue Jackets")
+devils = Tag.create(name: "New Jersey Devils")
+islanders = Tag.create(name: "New York Islanders")
+rangers = Tag.create(name: "New York Rangers")
+flyers = Tag.create(name: "Philadelphia Flyers")
+penguins = Tag.create(name: "Pittsburgh Penguins")
+capitals = Tag.create(name: "Washington Capitals")
+ducks = Tag.create(name: "Anaheim Ducks")
+coyotes = Tag.create(name: "Arizona Coyotes")
+flames = Tag.create(name: "Calgary Flames")
+oilers = Tag.create(name: "Edmonton Oilers")
+kings = Tag.create(name: "Los Angeles Kings")
+sharks = Tag.create(name: "San Jose Sharks")
+canucks = Tag.create(name: "Vancouver Canucks")
+blackhawks = Tag.create(name: "Chicago Blackhawks")
+avalanche = Tag.create(name: "Colorado Avalanche")
+stars = Tag.create(name: "Dallas Stars")
+wild = Tag.create(name: "Minnesota Wild")
+predators = Tag.create(name: "Nashville Predators")
+blues = Tag.create(name: "St. Louis Blues")
+jets = Tag.create(name: "Winnipeg Jets")
 
 
-bills = Performer.create(name: "Buffalo Bills")
-dolphins = Performer.create(name: "Miami Dolphins")
-patriots = Performer.create(name: "New England Patriots")
-jets = Performer.create(name: "New York Jets")
-ravens = Performer.create(name: "Baltimore Ravens")
-bengals = Performer.create(name: "Cincinnati Bengals")
-browns = Performer.create(name: "Cleveland Browns")
-steelers = Performer.create(name: "Pittsburgh Steelers")
-texans = Performer.create(name: "Houston Texans")
-colts = Performer.create(name: "Indianapolis Colts")
-jaguars = Performer.create(name: "Jacksonville Jaguars")
-titans = Performer.create(name: "Tennessee Titans")
-broncos = Performer.create(name: "Denver Broncos")
-chiefs = Performer.create(name: "Kansas City Chiefs")
-raiders = Performer.create(name: "Oakland Raiders")
-chargers = Performer.create(name: "San Diego Chargers")
-cowboys = Performer.create(name: "Dallas Cowboys")
-giants = Performer.create(name: "New York Giants")
-eagles = Performer.create(name: "Philadelphia Eagles")
-redskins = Performer.create(name: "Washington Redskins")
-bears = Performer.create(name: "Chicago Bears")
-lions = Performer.create(name: "Detroit Lions")
-packers = Performer.create(name: "Green Bay Packers")
-vikings = Performer.create(name: "Minnesota Vikings")
-falcons = Performer.create(name: "Atlanta Falcons")
-panthers = Performer.create(name: "Carolina Panthers")
-saints = Performer.create(name: "New Orleans Saints")
-buccaneers = Performer.create(name: "Tampa Bay Buccaneers")
-cardinals = Performer.create(name: "Arizona Cardinals")
-rams = Performer.create(name: "Los Angeles Rams")
-fortyniners = Performer.create(name: "San Francisco 49ers")
-seahawks = Performer.create(name: "Seattle Seahawks")
+bills = Tag.create(name: "Buffalo Bills")
+dolphins = Tag.create(name: "Miami Dolphins")
+patriots = Tag.create(name: "New England Patriots")
+jets = Tag.create(name: "New York Jets")
+ravens = Tag.create(name: "Baltimore Ravens")
+bengals = Tag.create(name: "Cincinnati Bengals")
+browns = Tag.create(name: "Cleveland Browns")
+steelers = Tag.create(name: "Pittsburgh Steelers")
+texans = Tag.create(name: "Houston Texans")
+colts = Tag.create(name: "Indianapolis Colts")
+jaguars = Tag.create(name: "Jacksonville Jaguars")
+titans = Tag.create(name: "Tennessee Titans")
+broncos = Tag.create(name: "Denver Broncos")
+chiefs = Tag.create(name: "Kansas City Chiefs")
+raiders = Tag.create(name: "Oakland Raiders")
+chargers = Tag.create(name: "San Diego Chargers")
+cowboys = Tag.create(name: "Dallas Cowboys")
+giants = Tag.create(name: "New York Giants")
+eagles = Tag.create(name: "Philadelphia Eagles")
+redskins = Tag.create(name: "Washington Redskins")
+bears = Tag.create(name: "Chicago Bears")
+lions = Tag.create(name: "Detroit Lions")
+packers = Tag.create(name: "Green Bay Packers")
+vikings = Tag.create(name: "Minnesota Vikings")
+falcons = Tag.create(name: "Atlanta Falcons")
+panthers = Tag.create(name: "Carolina Panthers")
+saints = Tag.create(name: "New Orleans Saints")
+buccaneers = Tag.create(name: "Tampa Bay Buccaneers")
+cardinals = Tag.create(name: "Arizona Cardinals")
+rams = Tag.create(name: "Los Angeles Rams")
+fortyniners = Tag.create(name: "San Francisco 49ers")
+seahawks = Tag.create(name: "Seattle Seahawks")
 
 
 ir = Event.create(
@@ -143,21 +143,21 @@ Broadcast.create(
 
 
 
-Tag.create(
+Tagging.create(
 	broadcast_id: 1,
 	performer_id: islanders.id
 	)
 
-Tag.create(
+Tagging.create(
 	broadcast_id: 1,
 	performer_id: rangers.id
 	)
 
-Tag.create(
+Tagging.create(
 	broadcast_id: 2,
 	performer_id: cowboys.id
 	)
-Tag.create(
+Tagging.create(
 	broadcast_id: 2,
 	performer_id: packers.id
 	)
